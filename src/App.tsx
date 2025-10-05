@@ -1,18 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import NombreCurso from './components/Nombre'
+import PresentacionOAV from './src_orlando_av/PresentacionOAV'
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-    <h1>
-      ORLANDO ALTAMIRNO VARGAS
-    </h1>
+      <h1>
+        <NombreCurso /> 
+      </h1>
+      <div>
+        <PresentacionOAV nombre="OrlandoAV" descripcion="Uso de Props con valor edad no obligatorio, valor por defecto" />
+      </div>
     </>
   )
 }
+
 
 export default App
