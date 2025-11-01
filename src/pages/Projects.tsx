@@ -8,6 +8,7 @@ export const Projects = () => {
 
 	return (
 		<section className="page projects-page">
+			Estas en Projects
 			<div className="container">
 				<h1>{t('projects.title') ?? 'Proyectos'}</h1>
 
