@@ -1,12 +1,10 @@
+// src\pages\About.tsx
+
 import { useLanguage } from '../hooks/useLanguage';
 import imgCarreraIS from '../assets/images/icons/LogoIS.png';
 import imgFacultad from '../assets/images/icons/CajaFacultad.jpg';
 import imgLaboratorio from '../assets/images/icons/Laboratorio.jpg';
-// Sugerencia: Añadir el logo de la universidad para mostrar el contexto
 import imgUMSS from '../assets/images/icons/LogoUMSS.png'; 
-
-
-// import '../styles/pages/About.css';
 
 export const About = () => {
     const { t } = useLanguage();
@@ -15,24 +13,28 @@ export const About = () => {
         <section className="page about-page">
             <div className="container">
                 <header className="about-header">
-                    <h1>{t('about.title') ?? 'Sobre Mí'}</h1>
-                    <h2>{t('about.subtitle') ?? 'Conoce un poco más sobre mi trayectoria'}</h2>
+                    <h1>{t('about.title')}</h1>
+                    <h2>{t('about.subtitle')}</h2>
                 </header>
                 
+                {/* Biografía consolidada */}
                 <div className="profile-bio">
-                    
                     <div className="bio-text">
-                        <p>{t('about.p1') ?? 'Párrafo 1 de About'}</p>
-                        <p>{t('about.p2') ?? 'Párrafo 2 de About'}</p>
-                        <p>{t('about.p3') ?? 'Párrafo 3 de About'}</p>
-                        <p>{t('about.p4') ?? 'Párrafo 4 de About'}</p>
-                        <p>{t('about.p5') ?? 'Párrafo 5 de About'}</p>
-                        <p>{t('about.p6') ?? 'Párrafo 6 de About'}</p>
+                        <p>{t('about.p1')}</p>
+                        <p>{t('about.p2')}</p>
+                        <p>{t('about.p3')}</p>
+                        <p>{t('about.p4')}</p>
+                        
+                        {/* Filosofía personal unificada */}
+                        <div className="personal-philosophy">
+                            <p><strong>{t('about.philosophy')}</strong></p>
+                        </div>
                     </div>
                 </div>
 
+                {/* Educación y experiencia unificadas */}
                 <div className="education-section">
-                    <h3>{t('about.educationTitle') ?? 'Formación Académica y Práctica'}</h3>
+                    <h3>{t('about.education.title')}</h3>
                     
                     <div className="education-item">
                         <img 
@@ -42,9 +44,10 @@ export const About = () => {
                             style={{ width: '150px', height: '150px' }}
                         />
                         <div className="details">
-                            <h4>{t('about.educationUMSS') ?? 'Ingeniería de Sistemas'}</h4>
-                            <p className="role">{t('about.educationRole') ?? 'Auxiliar Practicante'}</p>
-                            <p className="description">{t('about.educationDescription') ?? 'Detalles de la formación y rol.'}</p>
+                            <h4>{t('about.education.umss')}</h4>
+                            <p className="status">{t('about.education.status')}</p>
+                            <p className="role">{t('about.education.role')}</p>
+                            <p className="description">{t('about.education.description')}</p>
                             
                             <div className="supporting-images">
                                 <img src={imgCarreraIS} alt="Logo Carrera IS" style={{ height: '150px' }}/>
@@ -56,20 +59,17 @@ export const About = () => {
 
                     <div className="education-item">
                         <div className="details">
-                            <h4>{t('about.otherStudies') ?? 'Otros Estudios Técnicos'}</h4>
-                            <p className="description">{t('about.otherDescription') ?? 'Detalles de otros estudios.'}</p>
+                            <h4>{t('about.education.other')}</h4>
                         </div>
                     </div>
-
-                    <div className="skills-summary">
-                        </div>
                 </div>
-                <p>{t('about.p7') ?? 'Párrafo 7 de About'}</p>
+
+                {/* Filosofía de trabajo */}
                 <div className="philosophy-section">
-                    <h2>{t('about.philosophy.title') ?? 'Filosofía de Trabajo'}</h2>
-                    <p>{t('about.philosophy.planning') ?? 'Enfoque en la planificación y el diseño'}</p>
-                    <p>{t('about.philosophy.learning') ?? 'Aprendizaje continuo'}</p>
-                    <p>{t('about.philosophy.understanding') ?? 'Comprensión profunda de las tecnologías'}</p>
+                    <h2>{t('about.philosophy.title')}</h2>
+                    <p>{t('about.philosophy.planning')}</p>
+                    <p>{t('about.philosophy.learning')}</p>
+                    <p>{t('about.philosophy.understanding')}</p>
                 </div>
             </div>
         </section>

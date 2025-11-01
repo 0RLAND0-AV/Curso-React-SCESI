@@ -1,79 +1,84 @@
+// src\pages\Home.tsx
+
 import { useLanguage } from '../hooks/useLanguage';
 import { useTheme } from "../hooks/useTheme";
 import profile4 from '../assets/images/profiles/profile4.jpg';
 // import profile3 from '../assets/images/profiles/profile3.webp';
-
 // import '../styles/pages/Home.css';
 
 export const Home = () => {
     const { t } = useLanguage();
     const { theme } = useTheme();
-    // const { language } = useLanguage();
     const themeStatsGithub = theme === 'light' ? 'transparent' : 'tokyonight';
+    // const { language } = useLanguage();
     // const languageStatsGithub = language === 'es' ? 'es' : 'en';
     return (
         <section className="page home-page">
-            
             <div className="container">
                 <div className="hero-section">
                     <img 
-                    src={profile4} 
-                    alt="Orlando Alt Var - Imagen de Perfil" 
-                    style={{ width: '300px', height: '300px', borderRadius: '50%', objectFit: 'cover' }} 
+                        src={profile4} 
+                        alt="Orlando Alt Var - Imagen de Perfil" 
+                        style={{ width: '300px', height: '300px', borderRadius: '50%', objectFit: 'cover' }} 
                     />
                     
-                    <h1>{t('home.greeting') ?? '¡Hola! Soy'} <span className="highlight-name">{t('home.name') ?? 'Orlando'}</span></h1>
-                    <h2>{t('home.title') ?? 'Desarrollador Full Stack'}</h2>
-                    <p className="lead">{t('home.subtitle') ?? 'Creando experiencias web modernas y funcionales'}</p>
-                    <p>{t('home.p1') ?? 'Párrafo 1 de About'}</p>
-                    <p>{t('home.p2') ?? 'Párrafo 2 de About'}</p>
-                    <p>{t('home.p3') ?? 'Párrafo 3 de About'}</p>
+                    <h1>{t('home.greeting')} <span className="highlight-name">{t('home.name')}</span></h1>
+                    <h2>{t('home.title')}</h2>
+                    <p className="lead">{t('home.subtitle')}</p>
+                    
+                    {/* Párrafos principales consolidados */}
+                    <div className="bio-content">
+                        <p>{t('home.p1')}</p>
+                        <p>{t('home.p2')}</p>
+                        {/* <p>{t('home.p3')}</p> */}
+                    </div>
                 </div>
 
-
+                {/* Sección de intereses */}
                 <div className="interests-section">
-                    <h2>{t('about.interests.title') ?? 'Áreas de Interés'}</h2>
-                    <p>{t('about.interests.description') ?? 'Tecnologías que me apasionan'}</p>
+                    <h2>{t('about.interests.title')}</h2>
+                    <p>{t('about.interests.description')}</p>
                 </div>
 
+                {/* Stack tecnológico unificado */}
                 <div className="tech-stack-section">
-                    <h2>{t('about.techstack.title') ?? 'Stack Tecnológico'}</h2>
+                    <h2>{t('about.techstack.title')}</h2>
                     
                     <div className="tech-category">
-                        <h3>{t('about.techstack.backend') ?? 'Backend (Especialización)'}</h3>
-                        <p>{t('about.techstack.backendList') ?? 'Django, FastAPI, Laravel, Express, NestJS'}</p>
+                        <h3>{t('about.techstack.backend')}</h3>
+                        <p>{t('about.techstack.backendList')}</p>
                     </div>
 
                     <div className="tech-category">
-                        <h3>{t('about.techstack.frontend') ?? 'Frontend'}</h3>
-                        <p>{t('about.techstack.frontendList') ?? 'React, Angular con TypeScript'}</p>
+                        <h3>{t('about.techstack.frontend')}</h3>
+                        <p>{t('about.techstack.frontendList')}</p>
                     </div>
 
                     <div className="tech-category">
-                        <h3>{t('about.techstack.mobile') ?? 'Desarrollo Móvil'}</h3>
-                        <p>{t('about.techstack.mobileList') ?? 'Ionic (Angular), Flutter'}</p>
+                        <h3>{t('about.techstack.mobile')}</h3>
+                        <p>{t('about.techstack.mobileList')}</p>
                     </div>
 
                     <div className="tech-category">
-                        <h3>{t('about.techstack.tools') ?? 'Herramientas y DevOps'}</h3>
-                        <p>{t('about.techstack.toolsList') ?? 'Git, Docker, Postman, Bash, PowerShell'}</p>
+                        <h3>{t('about.techstack.tools')}</h3>
+                        <p>{t('about.techstack.toolsList')}</p>
                     </div>
 
                     <div className="tech-category">
-                        <h3>{t('about.techstack.deployment') ?? 'Deployment'}</h3>
-                        <p>{t('about.techstack.deploymentList') ?? 'PythonAnywhere, Railway, Vercel, Render'}</p>
+                        <h3>{t('about.techstack.deployment')}</h3>
+                        <p>{t('about.techstack.deploymentList')}</p>
                     </div>
                 </div>
 
-
+                {/* Estadísticas de GitHub */}
                 <div className='graph-stats-github'>
                     <img
-                        // locale=${languageStatsGithub}
                         src={`https://streak-stats.demolab.com?user=0RLAND0-AV&theme=${themeStatsGithub}&border_radius=10&locale=en`} 
                         alt="GitHub Activity Streak"
                         className="github-stat-card"
                     />
                     <img
+                        // locale=${languageStatsGithub}
                         src={`http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=0RLAND0-AV&theme=${themeStatsGithub}&exclude=CSS`}
                         alt="Top Languages"
                         className="github-stat-card"
@@ -93,3 +98,5 @@ export const Home = () => {
         </section> 
     );
 };
+
+
