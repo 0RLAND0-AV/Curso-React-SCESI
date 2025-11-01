@@ -9,8 +9,8 @@ const { t } = useLanguage();
 const currentYear = new Date().getFullYear();
 
 const socialLinks = [
-    { name: 'GitHub', url: 'https://github.com', icon: githubIcon },
-    { name: 'LinkedIn', url: 'https://linkedin.com', icon: linkedinIcon },
+    { name: 'GitHub', url: 'https://github.com/0RLAND0-AV', icon: githubIcon },
+    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/orlando-a-v-98b3672b7/', icon: linkedinIcon },
     { name: 'Twitter', url: 'https://twitter.com', icon: twitterIcon },
 ];
 
@@ -36,7 +36,7 @@ return (
 
             <div className="footer__text">
             <p>
-                {t('footer.developed')} ❤️ {t('footer.by')} {t('home.name')}
+                {t('footer.developed')}  {t('footer.by')} {t('home.name')}
             </p>
             <p>
                 © {currentYear} {t('footer.rights')}
