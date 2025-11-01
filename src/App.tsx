@@ -1,15 +1,14 @@
 import './App.css'
-
+import { MainLayout } from './layouts/MainLayout';
 function App() {
   
   return (
     <>
-      <h1>
-        Mi portafolio 
-      </h1>
+      <MainLayout />
+        
       
       
-      
+  
     </>
   )
 }
