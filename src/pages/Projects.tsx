@@ -1,3 +1,4 @@
+// src\pages\Projects.tsx
 import { projects } from '../data/projects';
 import { ProjectCard } from '../components/ui/ProjectCard';
 import { useLanguage } from '../hooks/useLanguage';
@@ -11,7 +12,8 @@ export const Projects = () => {
 			Estas en Projects
 			<div className="container">
 				<h1>{t('projects.title') ?? 'Proyectos'}</h1>
-
+				<p className="lead">{t('projects.subtitle') ?? 'Subtitle default si no reconoce providers'}</p>
+				
 				<div className="projects-grid">
 					{projects.map(project => (
 						<ProjectCard key={project.id} project={project} />

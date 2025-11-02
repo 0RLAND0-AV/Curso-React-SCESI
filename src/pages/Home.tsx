@@ -46,33 +46,35 @@ export const Home = () => {
                     <p>{t('about.interests.description')}</p>
                 </div>
 
-                {/* Stack tecnológico unificado */}
+                {/* Stack tecnológico - Versión Ultra Compacta con Emojis */}
                 <div className="tech-stack-section">
                     <h2>{t('about.techstack.title')}</h2>
                     
-                    <div className="tech-category">
-                        <h3>{t('about.techstack.backend')}</h3>
-                        <p>{t('about.techstack.backendList')}</p>
-                    </div>
-
-                    <div className="tech-category">
-                        <h3>{t('about.techstack.frontend')}</h3>
-                        <p>{t('about.techstack.frontendList')}</p>
-                    </div>
-
-                    <div className="tech-category">
-                        <h3>{t('about.techstack.mobile')}</h3>
-                        <p>{t('about.techstack.mobileList')}</p>
-                    </div>
-
-                    <div className="tech-category">
-                        <h3>{t('about.techstack.tools')}</h3>
-                        <p>{t('about.techstack.toolsList')}</p>
-                    </div>
-
-                    <div className="tech-category">
-                        <h3>{t('about.techstack.deployment')}</h3>
-                        <p>{t('about.techstack.deploymentList')}</p>
+                    <div className="tech-stack-columns">
+                        <div className="tech-column">
+                            <strong>🚀 {t('about.techstack.backend')}:</strong>
+                            <span>Django, FastAPI, Laravel, Express, NestJS</span>
+                        </div>
+                        
+                        <div className="tech-column">
+                            <strong>💻 {t('about.techstack.frontend')}:</strong>
+                            <span>React, Angular, TypeScript</span>
+                        </div>
+                        
+                        <div className="tech-column">
+                            <strong>📱 {t('about.techstack.mobile')}:</strong>
+                            <span>Ionic, Flutter</span>
+                        </div>
+                        
+                        <div className="tech-column">
+                            <strong>🛠️ {t('about.techstack.tools')}:</strong>
+                            <span>Git, Docker, Postman, Bash, PowerShell</span>
+                        </div>
+                        
+                        <div className="tech-column">
+                            <strong>☁️ {t('about.techstack.deployment')}:</strong>
+                            <span>Railway, Vercel, Render, PythonAnywhere</span>
+                        </div>
                     </div>
                 </div>
 

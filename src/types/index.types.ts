@@ -17,6 +17,10 @@ export interface Certificate {
 // TIPOS DE PROYECTOS
 // ========================================
 
+// ========================================
+// TIPOS DE PROYECTOS
+// ========================================
+
 export interface Project {
   id: string;
   title: {
@@ -27,7 +31,7 @@ export interface Project {
     es: string;
     en: string;
   };
-  image: string;
+  images: string[]; // Array de 1 a 5 imágenes
   technologies: string[];
   github?: string;
   demo?: string;
@@ -37,7 +41,6 @@ export interface Project {
 }
 
 export type ProjectCategory = 'web' | 'mobile' | 'fullstack' | 'backend' | 'other';
-
 // ========================================
 // TIPOS DE TEMA
 // ========================================

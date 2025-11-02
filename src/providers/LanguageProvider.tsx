@@ -55,7 +55,7 @@ const translations = {
 
     // Stack tecnológico
     'about.techstack.title': 'Stack Tecnológico',
-    'about.techstack.backend': 'Backend (Especialización)',
+    'about.techstack.backend': 'Backend (Favorito)',
     'about.techstack.backendList': 'Django, FastAPI, Laravel (Blade, Composer), Express (TypeScript, TypeORM), NestJS',
     'about.techstack.frontend': 'Frontend',
     'about.techstack.frontendList': 'React, Angular (ambos con TypeScript)',
@@ -82,7 +82,7 @@ const translations = {
 
     // Projects
     'projects.title': 'Mis Proyectos',
-    'projects.subtitle': 'Algunos de mis trabajos recientes',
+    'projects.subtitle': 'Algunos de mis proyectos recientes',
     'projects.featured': 'Proyectos Destacados',
     'projects.all': 'Todos los Proyectos',
     'projects.viewCode': 'Ver código',
@@ -151,7 +151,7 @@ const translations = {
 
     // Tech stack
     'about.techstack.title': 'Tech Stack',
-    'about.techstack.backend': 'Backend (Specialization)',
+    'about.techstack.backend': 'Backend (Favorite)',
     'about.techstack.backendList': 'Django, FastAPI, Laravel (Blade, Composer), Express (TypeScript, TypeORM), NestJS',
     'about.techstack.frontend': 'Frontend',
     'about.techstack.frontendList': 'React, Angular (both with TypeScript)',
@@ -178,7 +178,7 @@ const translations = {
     
     // Projects
     'projects.title': 'My Projects',
-    'projects.subtitle': 'Some of my recent work',
+    'projects.subtitle': 'Some of my recent projects',
     'projects.featured': 'Featured Projects',
     'projects.all': 'All Projects',
     'projects.viewCode': 'View code',
