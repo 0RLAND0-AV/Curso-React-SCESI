@@ -25,7 +25,13 @@ export const Home = () => {
                     <h1>{t('home.greeting')} <span className="highlight-name">{t('home.name')}</span></h1>
                     <h2>{t('home.title')}</h2>
                     <p className="lead">{t('home.subtitle')}</p>
-                    
+                    <a 
+                        href="/assets/documents/Orlando_Alt_Var_CV.pdf"  
+                        download="Orlando_Alt_Var_CV.pdf" 
+                        className="btn btn-primary download-cv"
+                    >
+                        {t('home.cv_cta') ?? 'Descargar CV'}
+                    </a>
                     {/* Párrafos principales consolidados */}
                     <div className="bio-content">
                         <p>{t('home.p1')}</p>

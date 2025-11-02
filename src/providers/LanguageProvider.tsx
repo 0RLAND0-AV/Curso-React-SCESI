@@ -1,5 +1,3 @@
-// src\providers\LanguageProvider.tsx
-
 import { useState, useEffect } from 'react';
 import type { ReactNode } from 'react'; 
 import { LanguageContext } from '../context/LanguageContext';
@@ -23,6 +21,8 @@ const translations = {
     'home.name': 'Orlando Alt Var',
     'home.title': 'Desarrollador Backend & Full Stack en Formación',
     'home.subtitle': 'Dedicado en el diseño y construcción de sistemas escalables con tecnologías como Node.js y Python. ',
+    'home.cv_cta': 'Descargar CV',
+    
     // Párrafos unificados del home
     'home.p1': 'Estudiante de Ingeniería de Sistemas en la Universidad Mayor de San Simón, Cochabamba, Bolivia, actualmente en mis últimos semestres. Apasionado por la tecnología, con especial interés en desarrollo backend, aunque también cuento con experiencia en frontend y móvil.',
     'home.p2': 'Mi enfoque detallista en la planificación asegura que cada proyecto cuente con una arquitectura sólida y bien definida antes de su implementación.',
@@ -33,21 +33,25 @@ const translations = {
     'about.subtitle': 'Ingeniería, Tecnología y la Estructura detrás del Código',
     
     // Párrafos principales reorganizados
-    'about.p1': 'Soy Orlando Alt Var, estudiante de Ingeniería de Sistemas en la Universidad Mayor de San Simón (UMSS), Cochabamba, Bolivia, próximo a finalizar mis estudios. Mi enfoque principal es el desarrollo Backend, donde aplico mi pasión por la planificación y el diseño de arquitecturas de sistemas robustas y escalables.',
-    'about.p2': 'Como auxiliar practicante en los laboratorios de mi facultad, recibo capacitación continua en desarrollo web y móvil. He desarrollado competencias sólidas en frameworks backend como Django, FastAPI, Express con TypeScript/TypeORM y NestJS, complementadas con experiencia en frontend (React, Angular) y desarrollo móvil (Ionic, Flutter).',
-    'about.p3': 'Mi metodología se basa en comprender profundamente cada herramienta y tecnología que implemento, asegurando soluciones técnicas robustas. Estoy en constante búsqueda de conocimiento, explorando áreas de vanguardia como Inteligencia Artificial, Robótica e Informática Forense, siempre listo para aplicar mis habilidades en proyectos desafiantes.',
-    'about.p4': 'Además de mi formación universitaria, he adquirido experiencia práctica en despliegue de aplicaciones utilizando plataformas como PythonAnywhere, Railway, Vercel y Render, junto con conocimientos en UI/UX, automatización, pruebas y contenerización con Docker.',
+    'about.p1': 'Soy Orlando Alt Var, desarrollador backend en formación, de Cochabamba, Bolivia.',
+    'about.p2': 'Mi enfoque principal es el desarrollo Backend, donde aplico mi pasión por la planificación y el diseño de arquitecturas de sistemas. Aunque aún no cuento con experiencia laboral formal, he cultivado habilidades robustas a través de proyectos académicos y personales, además de mi rol como auxiliar practicante en los laboratorios de mi facultad.',
+    'about.p3': 'Trabajo con frameworks backend como Django, FastAPI, Express (TypeScript/TypeORM) y NestJS, complementando mi experiencia con frontend (React, Angular) y desarrollo móvil (Ionic, Flutter). Además, poseo conocimientos en UI/UX, automatización, pruebas, contenerización con Docker y despliegue de aplicaciones en plataformas como PythonAnywhere, Railway, Vercel y Render.',
+    'about.p4': 'Mi metodología se basa en comprender a fondo cada herramienta antes de implementarla, garantizando soluciones técnicas estables y mantenibles. Considero que una buena planificación es el mapa esencial para el éxito de cualquier proyecto: no se puede construir sin una estructura clara. Aunque utilizo herramientas modernas como IA para optimizar el desarrollo, siempre busco mantener un equilibrio entre eficiencia y comprensión técnica.',
+    'about.p5': 'Me encuentro en constante búsqueda de aprendizaje, explorando áreas como Inteligencia Artificial, Robótica e Informática Forense, motivado por la curiosidad y la mejora continua.',
 
-    // Filosofía personal unificada
-    'about.philosophy': 'Creo firmemente en el desarrollo constante, tanto del software como personal. Mi lema es: "Si funciona, no lo toques... pero el verdadero progreso nace del compromiso constante con la mejora". Valoro la planificación cuidadosa como el mapa esencial para el éxito de cualquier proyecto tecnológico.',
+    // Quote personal
+    'about.quote': 'Creo firmemente en el desarrollo constante, tanto del software como personal. Como diría Tío Ben: "Un gran poder conlleva una gran responsabilidad."',
+    'about.looking': 'Busco participar en proyectos desafiantes que me permitan aplicar y expandir mis conocimientos.',
 
     // Educación y experiencia consolidada
-    'about.education.title': 'Formación Académica y Experiencia',
+    'about.education.title': 'Formación Académica y Práctica',
     'about.education.umss': 'Ingeniería de Sistemas - Universidad Mayor de San Simón (UMSS)',
-    'about.education.status': 'Últimos semestres - Próximo a egresar',
+    'about.education.location': 'Cochabamba, Bolivia',
+    'about.education.status': 'Cursando últimos semestres - Próximo a egresar',
     'about.education.role': 'Auxiliar Practicante de Laboratorios de Informática y Sistemas',
     'about.education.description': 'Capacitación continua y mentoría en desarrollo web y móvil, adquiriendo experiencia práctica en entornos académicos.',
-    'about.education.other': 'Instituto Técnico Álvarez Plata (2024) - Formación complementaria en Sistemas Informáticos',
+    'about.education.other.title': 'Exploración Académica',
+    'about.education.other.description': 'Instituto Técnico Álvarez Plata (Gestión 2024) – Técnico Superior en Sistemas Informáticos. Inicié la carrera por interés en conocer su enfoque práctico, pero decidí no continuarla para priorizar mi formación en Ingeniería de Sistemas y por motivos de tiempo.',
 
     // Stack tecnológico
     'about.techstack.title': 'Stack Tecnológico',
@@ -67,10 +71,10 @@ const translations = {
     'about.interests.description': 'Apasionado por redes, desarrollo móvil, robótica, IoT e Inteligencia Artificial. Busco constantemente aprender y aplicar nuevas tecnologías, explorando áreas de vanguardia para crear soluciones innovadoras.',
 
     // Filosofía de trabajo
-    'about.philosophy.title': 'Filosofía de Trabajo',
-    'about.philosophy.planning': 'Considero que la planificación y el diseño son las fases más cruciales de cualquier proyecto. No se puede construir sin un plano sólido que guíe cada etapa del desarrollo.',
-    'about.philosophy.learning': 'El aprendizaje continuo es fundamental. Utilizo herramientas modernas como IA para optimizar el desarrollo, pero siempre busco comprender a fondo el funcionamiento interno de cada tecnología que implemento.',
-    'about.philosophy.understanding': 'Me motiva entender cómo funcionan las cosas desde sus cimientos, no solo utilizarlas superficialmente. Esta curiosidad me impulsa a explorar constantemente nuevas tecnologías y metodologías.',
+    'about.philosophy.title': 'Filosofía de Trabajo y Aprendizaje',
+    'about.philosophy.planning': 'La planificación es fundamental: cada proyecto debe tener un diseño claro antes de comenzar, ya que no se puede navegar sin un mapa claro del destino. El aprendizaje continuo también es esencial; constantemente busco expandir mis conocimientos en nuevas áreas, desde Inteligencia Artificial y Robótica hasta informática forense, UI/UX, automatización y pruebas. Aunque el conocimiento teórico es importante, considero que la práctica es clave para dominarlo.',
+    'about.philosophy.learning': 'Me motiva entender cómo funcionan las cosas desde su núcleo, no solo utilizarlas superficialmente. Esta curiosidad me impulsa a explorar constantemente nuevas tecnologías y metodologías, siempre buscando la comprensión profunda sobre el uso superficial.',
+    'about.philosophy.understanding': 'Me considero una persona curiosa y proactiva, interesada en aplicar el conocimiento en proyectos reales y en mantener un desarrollo constante, tanto del software como personal.',
 
     // Projects
     'projects.title': 'Mis Proyectos',
@@ -109,6 +113,8 @@ const translations = {
     'home.name': 'Orlando Alt Var',
     'home.title': 'Backend & Full Stack Developer in Training',
     'home.subtitle': 'Dedicated to the design and construction of scalable systems with technologies such as Node.js and Python.',
+    'home.cv_cta': 'Download CV',
+    
     // Unified home paragraphs
     'home.p1': 'Systems Engineering student at Universidad Mayor de San Simón, Cochabamba, Bolivia, currently in my final semesters. Passionate about technology, with a special interest in backend development, although I also have experience in frontend and mobile.',
     'home.p2': 'My meticulous approach to planning ensures that each project has a solid and well-defined architecture before implementation.',
@@ -119,21 +125,25 @@ const translations = {
     'about.subtitle': 'Engineering, Technology, and the Structure Behind the Code',
     
     // Reorganized main paragraphs
-    'about.p1': 'I am Orlando Alt Var, a Systems Engineering student at Universidad Mayor de San Simón (UMSS) in Cochabamba, Bolivia, currently completing my final semesters. My main focus is Backend development, where I apply my passion for planning and designing robust, scalable system architectures.',
-    'about.p2': 'As a teaching assistant in my faculty\'s laboratories, I receive continuous training in web and mobile development. I have developed solid competencies in backend frameworks like Django, FastAPI, Express with TypeScript/TypeORM, and NestJS, complemented by frontend experience (React, Angular) and mobile development (Ionic, Flutter).',
-    'about.p3': 'My methodology is based on deeply understanding every tool and technology I implement, ensuring robust technical solutions. I am constantly seeking knowledge, exploring cutting-edge areas like Artificial Intelligence, Robotics, and Forensic Computing, always ready to apply my skills to challenging projects.',
-    'about.p4': 'Beyond my university education, I have gained practical experience in application deployment using platforms like PythonAnywhere, Railway, Vercel, and Render, along with knowledge in UI/UX, automation, testing, and containerization with Docker.',
+    'about.p1': 'I am Orlando Alt Var, a backend developer in training from Cochabamba, Bolivia.',
+    'about.p2': 'My main focus is Backend development, where I apply my passion for planning and designing system architectures. Although I don\'t have formal work experience yet, I have cultivated robust skills through academic and personal projects, as well as my role as a teaching assistant in my faculty\'s laboratories.',
+    'about.p3': 'I work with backend frameworks like Django, FastAPI, Express (TypeScript/TypeORM), and NestJS, complementing my experience with frontend (React, Angular) and mobile development (Ionic, Flutter). Additionally, I have knowledge in UI/UX, automation, testing, containerization with Docker, and application deployment on platforms like PythonAnywhere, Railway, Vercel, and Render.',
+    'about.p4': 'My methodology is based on thoroughly understanding each tool before implementing it, ensuring stable and maintainable technical solutions. I believe that good planning is the essential map for the success of any project: you cannot build without a clear structure. Although I use modern tools like AI to optimize development, I always seek to maintain a balance between efficiency and technical understanding.',
+    'about.p5': 'I am constantly seeking to learn, exploring areas like Artificial Intelligence, Robotics, and Forensic Computing, driven by curiosity and continuous improvement.',
 
-    // Unified personal philosophy
-    'about.philosophy': 'I firmly believe in constant development, both in software and personally. My motto is: "If it ain\'t broke, don\'t fix it... but true progress comes from a constant commitment to improvement." I value careful planning as the essential map for the success of any technological project.',
+    // Personal quote
+    'about.quote': 'I firmly believe in constant development, both in software and personally. As Uncle Ben would say: \'With great power comes great responsibility.\'',
+    'about.looking': 'I seek to participate in challenging projects that allow me to apply and expand my knowledge.',
 
     // Consolidated education and experience
-    'about.education.title': 'Academic Background and Experience',
+    'about.education.title': 'Academic Background and Practice',
     'about.education.umss': 'Systems Engineering - Universidad Mayor de San Simón (UMSS)',
+    'about.education.location': 'Cochabamba, Bolivia',
     'about.education.status': 'Final semesters - Soon to graduate',
-    'about.education.role': 'Information and Systems Laboratory Assistant Practitioner',
+    'about.education.role': 'Information and Systems Laboratory Teaching Assistant',
     'about.education.description': 'Continuous training and mentorship in web and mobile development, gaining practical experience in academic environments.',
-    'about.education.other': 'Instituto Técnico Álvarez Plata (2024) - Complementary training in Computer Systems',
+    'about.education.other.title': 'Academic Exploration',
+    'about.education.other.description': 'Instituto Técnico Álvarez Plata (2024 Academic Year) – Higher Technician in Computer Systems. I started the program out of interest in its practical approach, but decided not to continue to prioritize my Systems Engineering degree and due to time constraints.',
 
     // Tech stack
     'about.techstack.title': 'Tech Stack',
@@ -151,11 +161,12 @@ const translations = {
     // Interests
     'about.interests.title': 'Areas of Interest',
     'about.interests.description': 'Passionate about networking, mobile development, robotics, IoT, and Artificial Intelligence. I am constantly seeking to learn and apply new technologies, exploring cutting-edge areas to create innovative solutions.',
+    
     // Work philosophy
-    'about.philosophy.title': 'Work Philosophy',
-    'about.philosophy.planning': 'I believe that planning and design are the most crucial phases of any project. You cannot build without a solid blueprint to guide each stage of development.',
-    'about.philosophy.learning': 'Continuous learning is essential. I use modern tools like AI to optimize development, but I always seek to deeply understand the inner workings of every technology I implement.',
-    'about.philosophy.understanding': 'I am motivated to understand how things work from their foundations, not just use them superficially. This curiosity drives me to constantly explore new technologies and methodologies.',
+    'about.philosophy.title': 'Work and Learning Philosophy',
+    'about.philosophy.planning': 'Planning is fundamental: every project must have a clear design before starting, as you cannot navigate without a clear map of the destination. Continuous learning is also essential; I constantly seek to expand my knowledge in new areas, from Artificial Intelligence and Robotics to forensic computing, UI/UX, automation, and testing. Although theoretical knowledge is important, I believe practice is key to mastering it.',
+    'about.philosophy.learning': 'I am motivated to understand how things work from their core, not just use them superficially. This curiosity drives me to constantly explore new technologies and methodologies, always seeking deep understanding over superficial use.',
+    'about.philosophy.understanding': 'I consider myself a curious and proactive person, interested in applying knowledge in real projects and maintaining constant development, both in software and personally.',
 
     // Projects
     'projects.title': 'My Projects',
@@ -204,10 +215,8 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
   };
 
   return (
-    <div>
-      <LanguageContext.Provider value={{ language, toggleLanguage, t }}>
-        {children}
-      </LanguageContext.Provider>
-    </div>
+    <LanguageContext.Provider value={{ language, toggleLanguage, t }}>
+      {children}
+    </LanguageContext.Provider>
   );
 };
