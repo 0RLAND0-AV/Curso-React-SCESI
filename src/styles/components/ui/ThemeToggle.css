@@ -1,0 +1,271 @@
+/* ========================================
+   THEME TOGGLE - Cambio de tema y lenguaje
+   ======================================== */
+
+.theme-toggle-wrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+/* ========================================
+   BOTÓN DE TEMA
+   ======================================== */
+.theme-toggle {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background-color: var(--color-bg-secondary);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0;
+}
+
+.theme-toggle:hover {
+  background-color: var(--color-bg-tertiary);
+  border-color: var(--color-primary);
+  transform: scale(1.05);
+}
+
+.theme-toggle:active {
+  transform: scale(0.95);
+}
+
+/* ========================================
+   ICONO DEL TEMA
+   ======================================== */
+.theme-toggle__icon {
+  width: 24px;
+  height: 24px;
+  color: var(--color-text);
+  transition: all var(--transition-base);
+  animation: iconRotate 0.5s ease-in-out;
+}
+
+/* Animación de rotación al cambiar */
+@keyframes iconRotate {
+  0% {
+    transform: rotate(0deg) scale(1);
+    opacity: 0;
+  }
+  50% {
+    transform: rotate(180deg) scale(0.8);
+    opacity: 0.5;
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Efecto de brillo para modo claro */
+[data-theme='light'] .theme-toggle__icon {
+  filter: drop-shadow(0 0 3px rgba(245, 158, 11, 0.5));
+}
+
+/* Efecto de resplandor para modo oscuro */
+[data-theme='dark'] .theme-toggle__icon {
+  filter: drop-shadow(0 0 3px rgba(139, 92, 246, 0.5));
+}
+
+/* ========================================
+   BOTÓN DE LENGUAJE
+   ======================================== */
+.language-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--color-bg-secondary);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-full);
+  color: var(--color-text);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  white-space: nowrap;
+}
+
+.language-toggle:hover {
+  background-color: var(--color-bg-tertiary);
+  border-color: var(--color-primary);
+  transform: scale(1.05);
+}
+
+.language-toggle:active {
+  transform: scale(0.95);
+}
+
+/* ========================================
+   TOOLTIP (Opcional)
+   ======================================== */
+.theme-toggle::after {
+  content: attr(title);
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  transform: translateX(-50%) scale(0.9);
+  background-color: var(--color-text);
+  color: var(--color-bg);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-xs);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: all var(--transition-base);
+}
+
+.theme-toggle:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+
+/* ========================================
+   ANIMACIÓN DE PULSO
+   ======================================== */
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(59, 130, 246, 0);
+  }
+}
+
+.theme-toggle:focus-visible {
+  animation: pulse 1.5s infinite;
+  outline: none;
+}
+
+/* ========================================
+   ESTADO ACTIVO CON GRADIENTE
+   ======================================== */
+.theme-toggle::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  opacity: 0;
+  border-radius: inherit;
+  transition: opacity var(--transition-base);
+}
+
+.theme-toggle:hover::before {
+  opacity: 0.1;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+@media (max-width: 768px) {
+  .theme-toggle-wrapper {
+    gap: var(--spacing-xs);
+  }
+
+  .theme-toggle {
+    width: 44px;
+    height: 44px;
+  }
+
+  .theme-toggle__icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .language-toggle {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: var(--text-xs);
+  }
+
+  /* Ocultar tooltip en mobile */
+  .theme-toggle::after {
+    display: none;
+  }
+}
+
+/* ========================================
+   VERSIÓN COMPACTA (Opcional)
+   ======================================== */
+.theme-toggle--compact {
+  width: 40px;
+  height: 40px;
+}
+
+.theme-toggle--compact .theme-toggle__icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* ========================================
+   ACCESIBILIDAD
+   ======================================== */
+@media (prefers-reduced-motion: reduce) {
+  .theme-toggle,
+  .theme-toggle__icon,
+  .language-toggle {
+    transition: none;
+    animation: none;
+  }
+}
+
+/* ========================================
+   GRUPO DE CONTROLES (Layout alternativo)
+   ======================================== */
+.controls-group {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  background-color: var(--color-bg-secondary);
+  padding: var(--spacing-xs);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-border);
+}
+
+.controls-group .theme-toggle,
+.controls-group .language-toggle {
+  border: none;
+  background-color: transparent;
+}
+
+.controls-group .theme-toggle:hover,
+.controls-group .language-toggle:hover {
+  background-color: var(--color-bg);
+}
+
+/* ========================================
+   ANIMACIÓN DE ENTRADA
+   ======================================== */
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.theme-toggle-wrapper {
+  animation: fadeInRight 0.5s ease-out;
+}
+
+/* ========================================
+   DARK MODE - Estilos específicos
+   ======================================== */
+[data-theme='dark'] .theme-toggle {
+  background-color: var(--color-bg-tertiary);
+}
+
+[data-theme='dark'] .language-toggle {
+  background-color: var(--color-bg-tertiary);
+}

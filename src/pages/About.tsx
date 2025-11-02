@@ -6,6 +6,7 @@ import imgFacultad from '../assets/images/icons/CajaFacultad.jpg';
 import imgLaboratorio from '../assets/images/icons/Laboratorio.jpg';
 import imgUMSS from '../assets/images/icons/LogoUMSS.png';
 import imgBackendDev from '../assets/images/icons/backend-development.jpg';
+import '../styles/pages/About.css';
 // import imgTeamwork from '../assets/images/icons/teamwork-coding.jpg'; 
 // import imgLearning from '../assets/images/icons/continuous-learning.jpg'; 
 // import imgPlanning from '../assets/images/icons/project-planning.jpg'; 
@@ -83,7 +84,7 @@ export const About = () => {
                         </div>
                     </div>
 
-                    <div className="education-item">
+                    <div className="education-item-other">
                         <div className="details">
                             <h4>{t('about.education.other.title')}</h4>
                             <p>{t('about.education.other.description')}</p>

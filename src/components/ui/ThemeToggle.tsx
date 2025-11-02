@@ -1,6 +1,6 @@
 import { useTheme } from '../../hooks/useTheme';
 import { useLanguage } from '../../hooks/useLanguage';
-// import './ThemeToggle.css';
+import '../../styles/components/ui/ThemeToggle.css';
 
 export const ThemeToggle = () => {
   const { theme, toggleTheme } = useTheme();

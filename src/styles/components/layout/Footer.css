@@ -1,0 +1,198 @@
+/* ========================================
+   FOOTER - Pie de página
+   ======================================== */
+
+.footer {
+  background-color: var(--color-bg-secondary);
+  border-top: 1px solid var(--color-border);
+  padding: var(--spacing-3xl) 0 var(--spacing-xl);
+  margin-top: auto;
+  transition: background-color var(--transition-base);
+}
+
+.footer__container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xl);
+  text-align: center;
+}
+
+/* ========================================
+   REDES SOCIALES
+   ======================================== */
+.footer__social {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background-color: var(--color-bg);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-full);
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.footer__social-link::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  opacity: 0;
+  transition: opacity var(--transition-base);
+  z-index: 0;
+}
+
+.footer__social-link:hover::before {
+  opacity: 1;
+}
+
+.footer__social-link:hover {
+  border-color: transparent;
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.footer__social-icon {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) saturate(100%);
+  opacity: 0.7;
+  transition: all var(--transition-base);
+  position: relative;
+  z-index: 1;
+}
+
+.footer__social-link:hover .footer__social-icon {
+  filter: brightness(0) saturate(100%) invert(1);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* ========================================
+   TEXTO DEL FOOTER
+   ======================================== */
+.footer__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.footer__text p {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.footer__text p:first-child {
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+
+/* ========================================
+   DIVISOR DECORATIVO
+   ======================================== */
+.footer__divider {
+  width: 100%;
+  max-width: 600px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-border),
+    transparent
+  );
+  margin: var(--spacing-lg) 0;
+}
+
+/* ========================================
+   ANIMACIÓN DE ENTRADA
+   ======================================== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.footer__social {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.footer__text {
+  animation: fadeInUp 0.6s ease-out 0.2s backwards;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+@media (max-width: 768px) {
+  .footer {
+    padding: var(--spacing-2xl) 0 var(--spacing-lg);
+  }
+
+  .footer__content {
+    gap: var(--spacing-lg);
+  }
+
+  .footer__social {
+    gap: var(--spacing-sm);
+  }
+
+  .footer__social-link {
+    width: 44px;
+    height: 44px;
+  }
+
+  .footer__social-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .footer__text p {
+    font-size: var(--text-xs);
+  }
+}
+
+/* ========================================
+   TEMA OSCURO - Ajustes específicos
+   ======================================== */
+[data-theme='dark'] .footer {
+  background-color: var(--color-bg-secondary);
+  border-top-color: var(--color-border);
+}
+
+[data-theme='dark'] .footer__social-link {
+  background-color: var(--color-bg-tertiary);
+  border-color: var(--color-border);
+}
+
+[data-theme='dark'] .footer__social-icon {
+  filter: brightness(0) saturate(100%) invert(1);
+  opacity: 0.8;
+}
+
+[data-theme='dark'] .footer__social-link:hover .footer__social-icon {
+  opacity: 1;
+}

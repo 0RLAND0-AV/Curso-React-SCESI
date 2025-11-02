@@ -1,0 +1,267 @@
+/* ========================================
+   PROJECT CARD - Tarjeta de proyecto
+   ======================================== */
+
+.project-card {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--color-primary);
+}
+
+/* ========================================
+   IMAGEN Y CARRUSEL
+   ======================================== */
+.project-card__image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  background-color: var(--color-bg-secondary);
+}
+
+.project-carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-card__image {
+  width: 100% !important;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0 !important;
+  transition: transform var(--transition-slow);
+}
+
+.project-card:hover .project-card__image {
+  transform: scale(1.05);
+}
+
+/* ========================================
+   CONTROLES DEL CARRUSEL
+   ======================================== */
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  opacity: 0;
+  z-index: 2;
+}
+
+.project-card:hover .carousel-control {
+  opacity: 1;
+}
+
+.carousel-control:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-control--prev {
+  left: var(--spacing-md);
+}
+
+.carousel-control--next {
+  right: var(--spacing-md);
+}
+
+/* ========================================
+   INDICADORES DEL CARRUSEL
+   ======================================== */
+.carousel-indicators {
+  position: absolute;
+  bottom: var(--spacing-md);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: var(--spacing-xs);
+  z-index: 2;
+}
+
+.carousel-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  padding: 0;
+}
+
+.carousel-indicator.active {
+  width: 24px;
+  background-color: white;
+}
+
+.carousel-indicator:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* ========================================
+   CONTADOR DE IMÁGENES
+   ======================================== */
+.carousel-counter {
+  position: absolute;
+  top: var(--spacing-md);
+  right: var(--spacing-md);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-md);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  z-index: 2;
+}
+
+/* ========================================
+   OVERLAY Y TECNOLOGÍAS
+   ======================================== */
+.project-card__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: var(--spacing-md);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    transparent 100%
+  );
+}
+
+.project-card__technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+}
+
+.project-card__tech-badge {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background-color: rgba(59, 130, 246, 0.9);
+  color: white;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  backdrop-filter: blur(10px);
+}
+
+/* ========================================
+   CONTENIDO DE LA TARJETA
+   ======================================== */
+.project-card__content {
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  flex: 1;
+}
+
+.project-card__title {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.project-card__description {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin: 0;
+  flex: 1;
+}
+
+/* ========================================
+   ACCIONES
+   ======================================== */
+.project-card__actions {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-top: auto;
+}
+
+.project-card__actions button {
+  flex: 1;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+@media (max-width: 768px) {
+  .project-card__image-wrapper {
+    height: 200px;
+  }
+
+  .project-card__content {
+    padding: var(--spacing-md);
+  }
+
+  .carousel-control {
+    width: 36px;
+    height: 36px;
+  }
+
+  .carousel-control--prev {
+    left: var(--spacing-sm);
+  }
+
+  .carousel-control--next {
+    right: var(--spacing-sm);
+  }
+
+  .project-card__actions {
+    flex-direction: column;
+  }
+}
+
+/* ========================================
+   ANIMACIONES
+   ======================================== */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.project-card__tech-badge {
+  animation: slideIn 0.3s ease-out backwards;
+}
+
+.project-card__tech-badge:nth-child(1) { animation-delay: 0.05s; }
+.project-card__tech-badge:nth-child(2) { animation-delay: 0.1s; }
+.project-card__tech-badge:nth-child(3) { animation-delay: 0.15s; }
+.project-card__tech-badge:nth-child(4) { animation-delay: 0.2s; }
+.project-card__tech-badge:nth-child(5) { animation-delay: 0.25s; }

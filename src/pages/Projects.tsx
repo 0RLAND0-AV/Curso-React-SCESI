@@ -2,6 +2,7 @@
 import { projects } from '../data/projects';
 import { ProjectCard } from '../components/ui/ProjectCard';
 import { useLanguage } from '../hooks/useLanguage';
+import '../styles/pages/Proyects.css';
 // import '../styles/pages/Projects.css';
 
 export const Projects = () => {
@@ -9,7 +10,7 @@ export const Projects = () => {
 
 	return (
 		<section className="page projects-page">
-			Estas en Projects
+			{/* Estas en Projects */}
 			<div className="container">
 				<h1>{t('projects.title') ?? 'Proyectos'}</h1>
 				<p className="lead">{t('projects.subtitle') ?? 'Subtitle default si no reconoce providers'}</p>

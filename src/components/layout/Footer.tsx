@@ -2,6 +2,7 @@ import { useLanguage } from '../../hooks/useLanguage';
 import githubIcon from '../../assets/images/icons/github.svg';
 import linkedinIcon from '../../assets/images/icons/linkedin.svg';
 import twitterIcon from '../../assets/images/icons/twitterx.svg';
+import '../../styles/components/layout/Footer.css';
 // import './Footer.css';
 
 export const Footer = () => {

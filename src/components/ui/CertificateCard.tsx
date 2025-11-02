@@ -1,4 +1,5 @@
 import type { Certificate } from '../../types/index.types';
+import '../../styles/components/ui/CertificateCard.css';
 
 interface CertificateCardProps {
 certificate: Certificate;

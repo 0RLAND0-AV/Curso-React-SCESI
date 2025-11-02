@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useLanguage } from '../../hooks/useLanguage';
 import { ThemeToggle } from '../../components/ui/ThemeToggle';
-// import './Navbar.css';
+import '../../styles/components/layout/Navbar.css';
 
 export const Navbar = () => {
   const { t } = useLanguage();
@@ -18,30 +18,41 @@ export const Navbar = () => {
 
   const isActive = (path: string) => location.pathname === path;
 
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
   return (
-    <div>
-      <nav className="navbar">
-       
+    <nav className="navbar">
+      {/* Botón hamburguesa para mobile */}
+      <button 
+        className={`navbar__toggle ${isMenuOpen ? 'navbar__toggle--open' : ''}`}
+        onClick={toggleMenu}
+        aria-label="Toggle menu"
+        aria-expanded={isMenuOpen}
+      >
+        <span className="navbar__toggle-line"></span>
+        <span className="navbar__toggle-line"></span>
+        <span className="navbar__toggle-line"></span>
+      </button>
 
-        <ul className={`navbar__list ${isMenuOpen ? 'navbar__list--open' : ''}`}>
-          {navLinks.map((link) => (
-            <li key={link.path} className="navbar__item">
-              <Link
-                to={link.path}
-                className={`navbar__link ${isActive(link.path) ? 'navbar__link--active' : ''}`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {link.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
+      {/* Lista de navegación */}
+      <ul className={`navbar__list ${isMenuOpen ? 'navbar__list--open' : ''}`}>
+        {navLinks.map((link) => (
+          <li key={link.path} className="navbar__item">
+            <Link
+              to={link.path}
+              className={`navbar__link ${isActive(link.path) ? 'navbar__link--active' : ''}`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {link.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
 
-        <div className="navbar__actions">
-            Botones de cambio de idioma y cambio de tema
-          <ThemeToggle />
-        </div>
-      </nav>
-    </div>
+      {/* Acciones (Theme toggle, etc) */}
+      <div className="navbar__actions">
+        <ThemeToggle />
+      </div>
+    </nav>
   );
 };

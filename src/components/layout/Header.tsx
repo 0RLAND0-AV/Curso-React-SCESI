@@ -1,4 +1,5 @@
 import { Navbar } from './Navbar';
+import '../../styles/components/layout/Header.css';
 // import './Header.css';
 
 export const Header = () => {

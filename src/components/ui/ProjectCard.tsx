@@ -2,6 +2,7 @@ import { useState } from 'react';
 import type { Project } from '../../types/index.types';
 import { useLanguage } from '../../hooks/useLanguage';
 import { Button } from './Button';
+import '../../styles/components/ui/ProjectCard.css';
 
 interface ProjectCardProps {
   project: Project;

@@ -3,6 +3,7 @@
 import { useLanguage } from '../hooks/useLanguage';
 import { useTheme } from "../hooks/useTheme";
 import profile4 from '../assets/images/profiles/profile4.jpg';
+import '../styles/pages/Home.css';
 // import profile3 from '../assets/images/profiles/profile3.webp';
 // import '../styles/pages/Home.css';
 
@@ -53,27 +54,27 @@ export const Home = () => {
                     <div className="tech-stack-columns">
                         <div className="tech-column">
                             <strong>🚀 {t('about.techstack.backend')}:</strong>
-                            <span>Django, FastAPI, Laravel, Express, NestJS</span>
+                            <span>{t('about.techstack.backendList')}</span>
                         </div>
                         
                         <div className="tech-column">
                             <strong>💻 {t('about.techstack.frontend')}:</strong>
-                            <span>React, Angular, TypeScript</span>
+                            <span>{t('about.techstack.frontendList')}</span>
                         </div>
                         
                         <div className="tech-column">
                             <strong>📱 {t('about.techstack.mobile')}:</strong>
-                            <span>Ionic, Flutter</span>
+                            <span>{t('about.techstack.mobileList')}</span>
                         </div>
                         
                         <div className="tech-column">
                             <strong>🛠️ {t('about.techstack.tools')}:</strong>
-                            <span>Git, Docker, Postman, Bash, PowerShell</span>
+                            <span>{t('about.techstack.toolsList')}</span>
                         </div>
                         
                         <div className="tech-column">
                             <strong>☁️ {t('about.techstack.deployment')}:</strong>
-                            <span>Railway, Vercel, Render, PythonAnywhere</span>
+                            <span>{t('about.techstack.deploymentList')}</span>
                         </div>
                     </div>
                 </div>

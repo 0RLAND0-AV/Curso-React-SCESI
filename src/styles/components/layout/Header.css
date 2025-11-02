@@ -1,0 +1,83 @@
+/* ========================================
+   HEADER - Estilos del encabezado principal
+   ======================================== */
+
+.header {
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+[data-theme='dark'] .header {
+  background-color: rgba(15, 23, 42, 0.9);
+  border-bottom-color: var(--color-border);
+}
+
+.header__container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: var(--spacing-md) var(--container-padding);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 70px;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.header__logo a {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  text-decoration: none;
+  transition: transform var(--transition-fast);
+}
+
+.header__logo a:hover {
+  transform: scale(1.05);
+}
+
+.header__logo-text {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--color-text);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Efecto scroll - header más pequeño */
+.header--scrolled {
+  box-shadow: var(--shadow-md);
+}
+
+.header--scrolled .header__container {
+  min-height: 60px;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+@media (max-width: 768px) {
+  .header__container {
+    padding: var(--spacing-sm) var(--spacing-md);
+    min-height: 60px;
+  }
+
+  .header__logo-text {
+    font-size: var(--text-lg);
+  }
+}

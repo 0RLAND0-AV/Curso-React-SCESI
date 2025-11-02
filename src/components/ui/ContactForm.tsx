@@ -4,7 +4,7 @@ import type { ContactFormData, ContactFormErrors, FormStatus } from '../../types
 import { useLanguage } from '../../hooks/useLanguage';
 import { sendEmail } from '../../services/email.service';
 import { Button } from './Button';
-// import './ContactForm.css';
+import '../../styles/components/ui/ContactForm.css';
 
 export const ContactForm = () => {
   const { t } = useLanguage();
