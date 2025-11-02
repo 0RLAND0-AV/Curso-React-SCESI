@@ -1,4 +1,11 @@
+// src\data\certificates.ts
 import type { Certificate } from '../types/index.types';
+import pythonCert from '../assets/images/certificates/python-data-science.jpg';
+import nodeCert from '../assets/images/certificates/nodejs-complete.jpg';
+import dockerCert from '../assets/images/certificates/docker-kubernetes.jpg';
+import reactCert from '../assets/images/certificates/react-complete.jpg';
+import djangoCert from '../assets/images/certificates/django-web.jpg';
+import cyberCert from '../assets/images/certificates/cybersecurity-cisco.jpg';
 
 export const certificates: Certificate[] = [
   {
@@ -8,7 +15,7 @@ export const certificates: Certificate[] = [
     date: 'Marzo 2024',
     credentialId: 'ABC123XYZ',
     credentialUrl: 'https://coursera.org/verify/ABC123XYZ',
-    imageUrl: '/src/assets/images/certificates/python-data-science.jpg',
+    imageUrl: pythonCert,
     skills: ['Python', 'Pandas', 'NumPy', 'Data Analysis']
   },
   {
@@ -18,7 +25,7 @@ export const certificates: Certificate[] = [
     date: 'Enero 2024',
     credentialId: 'UC-NODE2024',
     credentialUrl: 'https://udemy.com/certificate/UC-NODE2024',
-    imageUrl: '/src/assets/images/certificates/nodejs-complete.jpg',
+    imageUrl: nodeCert,
     skills: ['Node.js', 'Express', 'REST API', 'MongoDB']
   },
   {
@@ -28,7 +35,7 @@ export const certificates: Certificate[] = [
     date: 'Diciembre 2023',
     credentialId: 'UC-DOCKER2023',
     credentialUrl: 'https://udemy.com/certificate/UC-DOCKER2023',
-    imageUrl: '/src/assets/images/certificates/docker-kubernetes.jpg',
+    imageUrl: dockerCert,
     skills: ['Docker', 'Kubernetes', 'DevOps', 'Containerization']
   },
   {
@@ -38,7 +45,7 @@ export const certificates: Certificate[] = [
     date: 'Noviembre 2023',
     credentialId: 'UC-REACT2023',
     credentialUrl: 'https://udemy.com/certificate/UC-REACT2023',
-    imageUrl: '/src/assets/images/certificates/react-complete.jpg',
+    imageUrl: reactCert,
     skills: ['React', 'Hooks', 'Redux', 'TypeScript']
   },
   {
@@ -48,7 +55,7 @@ export const certificates: Certificate[] = [
     date: 'Octubre 2023',
     credentialId: 'DJANGO-MS-2023',
     credentialUrl: 'https://edx.org/certificate/DJANGO-MS-2023',
-    imageUrl: '/src/assets/images/certificates/django-web.jpg',
+    imageUrl: djangoCert,
     skills: ['Django', 'Python', 'REST Framework', 'PostgreSQL']
   },
   {
@@ -57,7 +64,7 @@ export const certificates: Certificate[] = [
     issuer: 'CISCO Networking Academy',
     date: 'Septiembre 2023',
     credentialUrl: 'https://cisco.com/verify/cyber2023',
-    imageUrl: '/src/assets/images/certificates/cybersecurity-cisco.jpg',
+    imageUrl: cyberCert,
     skills: ['Network Security', 'Ethical Hacking', 'Cybersecurity', 'CISCO']
   }
 ];

@@ -1,4 +1,35 @@
+// src\data\projects.ts
 import type { Project } from '../types/index.types';
+
+// 🖼️ Importar imágenes del proyecto 1
+import project1_1 from '../assets/images/projects/project1-1.jpg';
+import project1_2 from '../assets/images/projects/project1-2.jpg';
+import project1_3 from '../assets/images/projects/project1-3.jpg';
+
+// 🖼️ Proyecto 2
+import project2_1 from '../assets/images/projects/project2-1.jpg';
+import project2_2 from '../assets/images/projects/project2-2.jpg';
+import project2_3 from '../assets/images/projects/project2-3.jpg';
+import project2_4 from '../assets/images/projects/project2-4.jpg';
+import project2_5 from '../assets/images/projects/project2-5.jpg';
+
+// 🖼️ Proyecto 3
+import project3_1 from '../assets/images/projects/project3-1.jpg';
+import project3_2 from '../assets/images/projects/project3-2.jpg';
+
+// 🖼️ Proyecto 4
+import project4_1 from '../assets/images/projects/project4-1.jpg';
+
+// 🖼️ Proyecto 5
+import project5_1 from '../assets/images/projects/project5-1.jpg';
+import project5_2 from '../assets/images/projects/project5-2.jpg';
+import project5_3 from '../assets/images/projects/project5-3.jpg';
+import project5_4 from '../assets/images/projects/project5-4.jpg';
+
+// 🖼️ Proyecto 6
+import project6_1 from '../assets/images/projects/project6-1.jpg';
+import project6_2 from '../assets/images/projects/project6-2.jpg';
+import project6_3 from '../assets/images/projects/project6-3.jpg';
 
 export const projects: Project[] = [
   {
@@ -12,9 +43,9 @@ export const projects: Project[] = [
       en: 'E-commerce platform with shopping cart, payment gateway and admin panel.'
     },
     images: [
-      '/src/assets/images/projects/project1-1.jpg',
-      '/src/assets/images/projects/project1-2.jpg',
-      '/src/assets/images/projects/project1-3.jpg'
+      project1_1,
+      project1_2,
+      project1_3
     ],
     technologies: ['React', 'TypeScript', 'Node.js', 'MongoDB', 'Stripe'],
     github: 'https://github.com',
@@ -34,11 +65,11 @@ export const projects: Project[] = [
       en: 'Interactive dashboard for data visualization with real-time charts and reports.'
     },
     images: [
-      '/src/assets/images/projects/project2-1.jpg',
-      '/src/assets/images/projects/project2-2.jpg',
-      '/src/assets/images/projects/project2-3.jpg',
-      '/src/assets/images/projects/project2-4.jpg',
-      '/src/assets/images/projects/project2-5.jpg'
+      project2_1,
+      project2_2,
+      project2_3,
+      project2_4,
+      project2_5
     ],
     technologies: ['React', 'TypeScript', 'Chart.js', 'Tailwind CSS'],
     github: 'https://github.com',
@@ -58,8 +89,8 @@ export const projects: Project[] = [
       en: 'RESTful API with JWT authentication, Swagger documentation and scalable architecture.'
     },
     images: [
-      '/src/assets/images/projects/project3-1.jpg',
-      '/src/assets/images/projects/project3-2.jpg'
+      project3_1,
+      project3_2
     ],
     technologies: ['Node.js', 'Express', 'PostgreSQL', 'JWT', 'Docker'],
     github: 'https://github.com',
@@ -79,7 +110,7 @@ export const projects: Project[] = [
       en: 'Task manager with drag & drop, advanced filters and real-time synchronization.'
     },
     images: [
-      '/src/assets/images/projects/project4-1.jpg'
+      project4_1
     ],
     technologies: ['React', 'Firebase', 'Material-UI', 'TypeScript'],
     github: 'https://github.com',
@@ -99,10 +130,10 @@ export const projects: Project[] = [
       en: 'Complete system for managing students, teachers, grades and attendance.'
     },
     images: [
-      '/src/assets/images/projects/project5-1.jpg',
-      '/src/assets/images/projects/project5-2.jpg',
-      '/src/assets/images/projects/project5-3.jpg',
-      '/src/assets/images/projects/project5-4.jpg'
+      project5_1,
+      project5_2,
+      project5_3,
+      project5_4
     ],
     technologies: ['Django', 'Python', 'PostgreSQL', 'Bootstrap', 'REST Framework'],
     github: 'https://github.com',
@@ -122,9 +153,9 @@ export const projects: Project[] = [
       en: 'Mobile app for food orders with real-time tracking and multiple payment methods.'
     },
     images: [
-      '/src/assets/images/projects/project6-1.jpg',
-      '/src/assets/images/projects/project6-2.jpg',
-      '/src/assets/images/projects/project6-3.jpg'
+      project6_1,
+      project6_2,
+      project6_3
     ],
     technologies: ['Flutter', 'Dart', 'Firebase', 'Google Maps API'],
     github: 'https://github.com',
