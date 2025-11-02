@@ -18,7 +18,7 @@ const translations = {
     
     // Home - Versión unificada y expandida
     'home.greeting': '¡Hola! Soy',
-    'home.name': 'Orlando Alt Var',
+    'home.name': 'Orlando AV',
     'home.title': 'Desarrollador Backend & Full Stack en Formación',
     'home.subtitle': 'Dedicado en el diseño y construcción de sistemas escalables con tecnologías como Node.js y Python. ',
     'home.cv_cta': 'Descargar CV',
@@ -33,7 +33,7 @@ const translations = {
     'about.subtitle': 'Ingeniería, Tecnología y la Estructura detrás del Código',
     
     // Párrafos principales reorganizados
-    'about.p1': 'Soy Orlando Alt Var, desarrollador backend en formación, de Cochabamba, Bolivia.',
+    'about.p1': 'Soy Orlando AV, desarrollador backend en formación, de Cochabamba, Bolivia.',
     'about.p2': 'Mi enfoque principal es el desarrollo Backend, donde aplico mi pasión por la planificación y el diseño de arquitecturas de sistemas. Aunque aún no cuento con experiencia laboral formal, he cultivado habilidades robustas a través de proyectos académicos y personales, además de mi rol como auxiliar practicante en los laboratorios de mi facultad.',
     'about.p3': 'Trabajo con frameworks backend como Django, FastAPI, Express (TypeScript/TypeORM) y NestJS, complementando mi experiencia con frontend (React, Angular) y desarrollo móvil (Ionic, Flutter). Además, poseo conocimientos en UI/UX, automatización, pruebas, contenerización con Docker y despliegue de aplicaciones en plataformas como PythonAnywhere, Railway, Vercel y Render.',
     'about.p4': 'Mi metodología se basa en comprender a fondo cada herramienta antes de implementarla, garantizando soluciones técnicas estables y mantenibles. Considero que una buena planificación es el mapa esencial para el éxito de cualquier proyecto: no se puede construir sin una estructura clara. Aunque utilizo herramientas modernas como IA para optimizar el desarrollo, siempre busco mantener un equilibrio entre eficiencia y comprensión técnica.',
@@ -114,7 +114,7 @@ const translations = {
     
     // Home - Consolidated version
     'home.greeting': 'Hi! I\'m',
-    'home.name': 'Orlando Alt Var',
+    'home.name': 'Orlando AV',
     'home.title': 'Backend & Full Stack Developer in Training',
     'home.subtitle': 'Dedicated to the design and construction of scalable systems with technologies such as Node.js and Python.',
     'home.cv_cta': 'Download CV',
@@ -129,7 +129,7 @@ const translations = {
     'about.subtitle': 'Engineering, Technology, and the Structure Behind the Code',
     
     // Reorganized main paragraphs
-    'about.p1': 'I am Orlando Alt Var, a backend developer in training from Cochabamba, Bolivia.',
+    'about.p1': 'I am Orlando AV, a backend developer in training from Cochabamba, Bolivia.',
     'about.p2': 'My main focus is Backend development, where I apply my passion for planning and designing system architectures. Although I don\'t have formal work experience yet, I have cultivated robust skills through academic and personal projects, as well as my role as a teaching assistant in my faculty\'s laboratories.',
     'about.p3': 'I work with backend frameworks like Django, FastAPI, Express (TypeScript/TypeORM), and NestJS, complementing my experience with frontend (React, Angular) and mobile development (Ionic, Flutter). Additionally, I have knowledge in UI/UX, automation, testing, containerization with Docker, and application deployment on platforms like PythonAnywhere, Railway, Vercel, and Render.',
     'about.p4': 'My methodology is based on thoroughly understanding each tool before implementing it, ensuring stable and maintainable technical solutions. I believe that good planning is the essential map for the success of any project: you cannot build without a clear structure. Although I use modern tools like AI to optimize development, I always seek to maintain a balance between efficiency and technical understanding.',

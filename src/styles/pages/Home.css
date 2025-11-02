@@ -3,34 +3,53 @@
    ======================================== */
 
 .home-page {
-  padding: var(--spacing-3xl) 0;
+  padding: var(--spacing-2xl) 0;
   min-height: calc(100vh - 80px);
 }
 
 /* ========================================
-   HERO SECTION
+   HERO SECTION - Layout Horizontal
    ======================================== */
 .hero-section {
-  text-align: center;
-  padding: var(--spacing-3xl) 0;
+  padding: var(--spacing-xl) 0;
   animation: fadeIn 0.8s ease-out;
 }
 
-.hero-section img {
+.hero-content {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: var(--spacing-2xl);
+  align-items: center;
   margin-bottom: var(--spacing-xl);
-  box-shadow: var(--shadow-xl);
+}
+
+.profile-column {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-image {
+  width: 270px;
+  height: 270px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: var(--shadow-lg);
   transition: transform var(--transition-base);
-  border: 4px solid var(--color-border);
+  border: 3px solid var(--color-border);
 }
 
-.hero-section img:hover {
+.profile-image:hover {
   transform: scale(1.05);
-  box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 15px 30px rgba(59, 130, 246, 0.3);
 }
 
-.hero-section h1 {
-  font-size: var(--text-5xl);
-  margin-bottom: var(--spacing-md);
+.info-column {
+  text-align: left;
+}
+
+.info-column h1 {
+  font-size: var(--text-4xl);
+  margin-bottom: var(--spacing-sm);
   animation: slideDown 0.6s ease-out 0.2s backwards;
 }
 
@@ -42,20 +61,17 @@
   font-weight: 800;
 }
 
-.hero-section h2 {
+.info-column h2 {
   color: var(--color-text-secondary);
-  font-size: var(--text-2xl);
+  font-size: var(--text-xl);
   font-weight: 500;
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
   animation: slideDown 0.6s ease-out 0.3s backwards;
 }
 
-.hero-section .lead {
-  font-size: var(--text-lg);
-  color: var(--color-text-muted);
-  max-width: 700px;
-  margin: 0 auto var(--spacing-xl);
-  line-height: 1.8;
+.info-column .lead {
+  font-size: var(--text-base);
+  line-height: 1.7;
   animation: slideDown 0.6s ease-out 0.4s backwards;
 }
 
@@ -64,140 +80,158 @@
   display: inline-flex;
   align-items: center;
   gap: var(--spacing-sm);
-  padding: var(--spacing-md) var(--spacing-xl);
+  padding: var(--spacing-sm) var(--spacing-lg);
   background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
   color: white;
   font-weight: 600;
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-md);
   transition: all var(--transition-base);
   animation: slideUp 0.6s ease-out 0.5s backwards;
-  margin-bottom: var(--spacing-2xl);
 }
 
 .download-cv:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-xl);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
   color: white;
 }
 
 /* Biografía */
 .bio-content {
-  max-width: 800px;
-  margin: var(--spacing-3xl) auto;
+  margin-top: var(--spacing-xl);
   text-align: left;
   animation: fadeIn 0.8s ease-out 0.6s backwards;
 }
 
 .bio-content p {
   font-size: var(--text-base);
-  line-height: 1.8;
-  margin-bottom: var(--spacing-lg);
+  line-height: 1.7;
+  margin-bottom: var(--spacing-md);
   color: var(--color-text-secondary);
+}
+
+.bio-content p:last-child {
+  margin-bottom: 0;
 }
 
 /* ========================================
    INTERESTS SECTION
    ======================================== */
-.interests-section {
+   
+/* .interests-section {
   background-color: var(--color-bg-secondary);
-  padding: var(--spacing-3xl);
-  border-radius: var(--radius-xl);
-  margin: var(--spacing-3xl) 0;
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  margin: var(--spacing-2xl) 0;
   text-align: center;
   animation: fadeIn 0.8s ease-out;
   border: 1px solid var(--color-border);
 }
 
 .interests-section h2 {
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
   color: var(--color-text);
+  font-size: var(--text-2xl);
 }
 
 .interests-section p {
-  font-size: var(--text-lg);
+  font-size: var(--text-base);
   color: var(--color-text-secondary);
   max-width: 800px;
   margin: 0 auto;
-  line-height: 1.8;
-}
+  line-height: 1.7;
+} */
 
 /* ========================================
-   TECH STACK SECTION
+   TECH STACK SECTION - Más compacta
    ======================================== */
 .tech-stack-section {
-  margin: var(--spacing-3xl) 0;
-  padding: var(--spacing-3xl);
+  margin: var(--spacing-2xl) 0;
+  padding: var(--spacing-xl);
   background: linear-gradient(135deg, 
     var(--color-bg-secondary) 0%, 
     var(--color-bg-tertiary) 100%);
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius-lg);
   border: 1px solid var(--color-border);
   animation: fadeIn 0.8s ease-out;
 }
 
 .tech-stack-section h2 {
   text-align: center;
-  margin-bottom: var(--spacing-2xl);
+  margin-bottom: var(--spacing-xl);
   color: var(--color-text);
+  font-size: var(--text-xl);
 }
 
 .tech-stack-columns {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--spacing-lg);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-md);
 }
 
 .tech-column {
   background-color: var(--color-bg);
-  padding: var(--spacing-lg);
-  border-radius: var(--radius-lg);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
   border: 1px solid var(--color-border);
   transition: all var(--transition-base);
 }
 
 .tech-column:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
   border-color: var(--color-primary);
 }
 
 .tech-column strong {
   display: block;
-  font-size: var(--text-lg);
-  margin-bottom: var(--spacing-sm);
+  font-size: var(--text-base);
+  margin-bottom: var(--spacing-xs);
   color: var(--color-text);
 }
 
 .tech-column span {
   display: block;
-  font-size: var(--text-sm);
+  font-size: var(--text-xs);
   color: var(--color-text-secondary);
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 /* ========================================
-   GITHUB STATS
+   GITHUB STATS - Mejorado
    ======================================== */
-.graph-stats-github {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--spacing-xl);
-  margin: var(--spacing-3xl) 0;
+.stats-section {
+  margin: var(--spacing-2xl) 0 0 0;
+}
+
+.stats-section h2 {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-text);
+  font-size: var(--text-2xl);
+}
+
+.graph-stats-row {
+  display: flex;
+  justify-content: space-around; /* Alinea en los extremos */
+  margin-bottom: var(--spacing-lg); /* Espacio entre filas */
+}
+
+.graph-stats-row:last-child {
+  margin-bottom: 0; /* Elimina margen en la última fila */
 }
 
 .github-stat-card {
-  width: 100%;
-  height: auto;
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-md);
   box-shadow: var(--shadow-md);
   transition: all var(--transition-base);
   border: 1px solid var(--color-border);
+  max-width: 49%; /* Asegura que no se estiren demasiado */
 }
 
 .github-stat-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-xl);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
 }
 
 /* ========================================
@@ -205,27 +239,33 @@
    ======================================== */
 @media (max-width: 768px) {
   .home-page {
-    padding: var(--spacing-2xl) 0;
-  }
-
-  .hero-section {
     padding: var(--spacing-xl) 0;
   }
 
-  .hero-section h1 {
-    font-size: var(--text-3xl);
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    text-align: center;
   }
 
-  .hero-section h2 {
-    font-size: var(--text-xl);
+  .info-column {
+    text-align: center;
   }
 
-  .hero-section img {
-    width: 200px !important;
-    height: 200px !important;
+  .profile-image {
+    width: 180px;
+    height: 180px;
   }
 
-  .tech-stack-columns {
+  .info-column h1 {
+    font-size: var(--text-2xl);
+  }
+
+  .info-column h2 {
+    font-size: var(--text-lg);
+  }
+
+  .tech-stack-grid {
     grid-template-columns: 1fr;
   }
 
@@ -236,18 +276,27 @@
 
   .interests-section,
   .tech-stack-section {
-    padding: var(--spacing-xl);
+    padding: var(--spacing-lg);
     margin: var(--spacing-xl) 0;
   }
 }
 
 @media (max-width: 480px) {
-  .hero-section h1 {
-    font-size: var(--text-2xl);
+  .profile-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .info-column h1 {
+    font-size: var(--text-xl);
   }
 
   .download-cv {
     width: 100%;
     justify-content: center;
+  }
+
+  .hero-content {
+    gap: var(--spacing-md);
   }
 }

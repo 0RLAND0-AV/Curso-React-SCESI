@@ -5,7 +5,8 @@ import imgCarreraIS from '../assets/images/icons/LogoIS.png';
 import imgFacultad from '../assets/images/icons/CajaFacultad.jpg';
 import imgLaboratorio from '../assets/images/icons/Laboratorio.jpg';
 import imgUMSS from '../assets/images/icons/LogoUMSS.png';
-import imgBackendDev from '../assets/images/icons/backend-development.jpg';
+// import imgBackendDev from '../assets/images/icons/backend-development.jpg';
+import perfil2 from '../assets/images/profiles/perfil12.avif';
 import '../styles/pages/About.css';
 // import imgTeamwork from '../assets/images/icons/teamwork-coding.jpg'; 
 // import imgLearning from '../assets/images/icons/continuous-learning.jpg'; 
@@ -26,7 +27,7 @@ export const About = () => {
                 <div className="profile-bio">
                     <div className="bio-image">
                         <img 
-                            src={imgBackendDev} 
+                            src={perfil2} 
                             alt="Desarrollo Backend" 
                             className="feature-image"
                             style={{ width: '300px', maxWidth: '300px', borderRadius: '8px' }}
