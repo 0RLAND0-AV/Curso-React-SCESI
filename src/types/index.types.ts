@@ -1,4 +1,19 @@
 // ========================================
+// TIPOS DE CERTIFICADOS
+// ========================================
+
+export interface Certificate {
+  id: number;
+  title: string;
+  issuer: string;
+  date: string;
+  credentialId?: string;
+  credentialUrl?: string;
+  imageUrl: string;
+  skills: string[];
+}
+
+// ========================================
 // TIPOS DE PROYECTOS
 // ========================================
 

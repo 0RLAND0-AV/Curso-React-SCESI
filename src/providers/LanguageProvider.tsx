@@ -76,6 +76,10 @@ const translations = {
     'about.philosophy.learning': 'Me motiva entender cómo funcionan las cosas desde su núcleo, no solo utilizarlas superficialmente. Esta curiosidad me impulsa a explorar constantemente nuevas tecnologías y metodologías, siempre buscando la comprensión profunda sobre el uso superficial.',
     'about.philosophy.understanding': 'Me considero una persona curiosa y proactiva, interesada en aplicar el conocimiento en proyectos reales y en mantener un desarrollo constante, tanto del software como personal.',
 
+    // Certificados
+    'about.certificates.title': 'Certificados',
+    'about.certificates.description': 'A continuación se presentan algunos de los certificados que he obtenido a lo largo de mi formación profesional.',
+
     // Projects
     'projects.title': 'Mis Proyectos',
     'projects.subtitle': 'Algunos de mis trabajos recientes',
@@ -168,6 +172,10 @@ const translations = {
     'about.philosophy.learning': 'I am motivated to understand how things work from their core, not just use them superficially. This curiosity drives me to constantly explore new technologies and methodologies, always seeking deep understanding over superficial use.',
     'about.philosophy.understanding': 'I consider myself a curious and proactive person, interested in applying knowledge in real projects and maintaining constant development, both in software and personally.',
 
+    // Certificates
+    'about.certificates.title': 'Certificates',
+    'about.certificates.description': 'Below are some of the certificates I have obtained throughout my professional training.',
+    
     // Projects
     'projects.title': 'My Projects',
     'projects.subtitle': 'Some of my recent work',

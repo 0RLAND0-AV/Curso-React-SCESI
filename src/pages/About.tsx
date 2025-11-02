@@ -1,9 +1,10 @@
 import { useLanguage } from '../hooks/useLanguage';
+import { certificates } from '../data/certificates';
+import { CertificateCard } from '../components/ui/CertificateCard';
 import imgCarreraIS from '../assets/images/icons/LogoIS.png';
 import imgFacultad from '../assets/images/icons/CajaFacultad.jpg';
 import imgLaboratorio from '../assets/images/icons/Laboratorio.jpg';
 import imgUMSS from '../assets/images/icons/LogoUMSS.png';
-// Nuevas imágenes sugeridas para mejorar la presentación
 import imgBackendDev from '../assets/images/icons/backend-development.jpg';
 // import imgTeamwork from '../assets/images/icons/teamwork-coding.jpg'; 
 // import imgLearning from '../assets/images/icons/continuous-learning.jpg'; 
@@ -87,6 +88,21 @@ export const About = () => {
                             <h4>{t('about.education.other.title')}</h4>
                             <p>{t('about.education.other.description')}</p>
                         </div>
+                    </div>
+                </div>
+                
+                {/* Certificaciones */}
+                <div className="certificates-section">
+                    <h2>{t('about.certificates.title')}</h2>
+                    <p className="certificates-intro">{t('about.certificates.description')}</p>
+                    
+                    <div className="certificates-grid">
+                        {certificates.map((certificate) => (
+                            <CertificateCard 
+                                key={certificate.id} 
+                                certificate={certificate} 
+                            />
+                        ))}
                     </div>
                 </div>
 

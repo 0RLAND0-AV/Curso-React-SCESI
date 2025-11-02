@@ -11,7 +11,7 @@ export const projects: Project[] = [
       es: 'Plataforma de comercio electrónico con carrito de compras, pasarela de pagos y panel de administración.',
       en: 'E-commerce platform with shopping cart, payment gateway and admin panel.'
     },
-    image: 'https://via.placeholder.com/600x400/3b82f6/ffffff?text=E-Commerce',
+    image: '/src/assets/images/projects/project1.jpg',
     technologies: ['React', 'TypeScript', 'Node.js', 'MongoDB', 'Stripe'],
     github: 'https://github.com',
     demo: 'https://demo.com',
