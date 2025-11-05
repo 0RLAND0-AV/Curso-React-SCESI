@@ -3,17 +3,14 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.tsx'
 import { BrowserRouter } from 'react-router-dom'
-import { LanguageProvider } from './providers/LanguageProvider.tsx'
-import { ThemeProvider } from './providers/ThemeProvider.tsx'
+import { AppProviders } from './providers/AppProviders.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <ThemeProvider> 
-      <LanguageProvider> 
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>
-      </LanguageProvider>
-    </ThemeProvider>
+    <AppProviders>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </AppProviders>
   </StrictMode>,
 )

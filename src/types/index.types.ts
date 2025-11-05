@@ -17,10 +17,6 @@ export interface Certificate {
 // TIPOS DE PROYECTOS
 // ========================================
 
-// ========================================
-// TIPOS DE PROYECTOS
-// ========================================
-
 export interface Project {
   id: string;
   title: {
