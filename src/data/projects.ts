@@ -3,33 +3,21 @@ import type { Project } from '../types/index.types';
 
 // 🖼️ Importar imágenes del proyecto 1
 import project1_1 from '../assets/images/projects/project1-1.jpg';
-import project1_2 from '../assets/images/projects/project1-2.jpg';
-import project1_3 from '../assets/images/projects/project1-3.jpg';
 
 // 🖼️ Proyecto 2
 import project2_1 from '../assets/images/projects/project2-1.jpg';
-import project2_2 from '../assets/images/projects/project2-2.jpg';
-import project2_3 from '../assets/images/projects/project2-3.jpg';
-import project2_4 from '../assets/images/projects/project2-4.jpg';
-import project2_5 from '../assets/images/projects/project2-5.jpg';
 
 // 🖼️ Proyecto 3
 import project3_1 from '../assets/images/projects/project3-1.jpg';
-import project3_2 from '../assets/images/projects/project3-2.jpg';
 
 // 🖼️ Proyecto 4
 import project4_1 from '../assets/images/projects/project4-1.jpg';
 
 // 🖼️ Proyecto 5
 import project5_1 from '../assets/images/projects/project5-1.jpg';
-import project5_2 from '../assets/images/projects/project5-2.jpg';
-import project5_3 from '../assets/images/projects/project5-3.jpg';
-import project5_4 from '../assets/images/projects/project5-4.jpg';
 
 // 🖼️ Proyecto 6
 import project6_1 from '../assets/images/projects/project6-1.jpg';
-import project6_2 from '../assets/images/projects/project6-2.jpg';
-import project6_3 from '../assets/images/projects/project6-3.jpg';
 
 export const projects: Project[] = [
   {
@@ -44,8 +32,8 @@ export const projects: Project[] = [
     },
     images: [
       project1_1,
-      project1_2,
-      project1_3
+      project2_1,
+      project3_1
     ],
     technologies: ['React', 'TypeScript', 'Node.js', 'MongoDB', 'Stripe'],
     github: 'https://github.com',
@@ -66,10 +54,10 @@ export const projects: Project[] = [
     },
     images: [
       project2_1,
-      project2_2,
-      project2_3,
-      project2_4,
-      project2_5
+      project3_1,
+      project4_1,
+      project5_1,
+      project6_1
     ],
     technologies: ['React', 'TypeScript', 'Chart.js', 'Tailwind CSS'],
     github: 'https://github.com',
@@ -90,7 +78,7 @@ export const projects: Project[] = [
     },
     images: [
       project3_1,
-      project3_2
+      project4_1
     ],
     technologies: ['Node.js', 'Express', 'PostgreSQL', 'JWT', 'Docker'],
     github: 'https://github.com',
@@ -131,9 +119,9 @@ export const projects: Project[] = [
     },
     images: [
       project5_1,
-      project5_2,
-      project5_3,
-      project5_4
+      project6_1,
+      project1_1,
+      project2_1
     ],
     technologies: ['Django', 'Python', 'PostgreSQL', 'Bootstrap', 'REST Framework'],
     github: 'https://github.com',
@@ -154,8 +142,8 @@ export const projects: Project[] = [
     },
     images: [
       project6_1,
-      project6_2,
-      project6_3
+      project1_1,
+      project2_1
     ],
     technologies: ['Flutter', 'Dart', 'Firebase', 'Google Maps API'],
     github: 'https://github.com',

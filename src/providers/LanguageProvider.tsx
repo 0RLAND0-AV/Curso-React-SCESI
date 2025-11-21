@@ -33,14 +33,14 @@ const translations = {
     'about.subtitle': 'Ingeniería, Tecnología y la Estructura detrás del Código',
     
     // Párrafos principales reorganizados
-    'about.p1': 'Soy Orlando AV, desarrollador backend en formación, de Cochabamba, Bolivia.',
+    'about.p1': 'Soy Orlando AV, desarrollador backend, Full Stack en formación, de Cochabamba, Bolivia.',
     'about.p2': 'Mi enfoque principal es el desarrollo Backend, donde aplico mi pasión por la planificación y el diseño de arquitecturas de sistemas. Aunque aún no cuento con experiencia laboral formal, he cultivado habilidades robustas a través de proyectos académicos y personales, además de mi rol como auxiliar practicante en los laboratorios de mi facultad.',
     'about.p3': 'Trabajo con frameworks backend como Django, FastAPI, Express (TypeScript/TypeORM) y NestJS, complementando mi experiencia con frontend (React, Angular) y desarrollo móvil (Ionic, Flutter). Además, poseo conocimientos en UI/UX, automatización, pruebas, contenerización con Docker y despliegue de aplicaciones en plataformas como PythonAnywhere, Railway, Vercel y Render.',
     'about.p4': 'Mi metodología se basa en comprender a fondo cada herramienta antes de implementarla, garantizando soluciones técnicas estables y mantenibles. Considero que una buena planificación es el mapa esencial para el éxito de cualquier proyecto: no se puede construir sin una estructura clara. Aunque utilizo herramientas modernas como IA para optimizar el desarrollo, siempre busco mantener un equilibrio entre eficiencia y comprensión técnica.',
     'about.p5': 'Me encuentro en constante búsqueda de aprendizaje, explorando áreas como Inteligencia Artificial, Robótica e Informática Forense, motivado por la curiosidad y la mejora continua.',
 
     // Quote personal
-    'about.quote': 'Creo firmemente en el desarrollo constante, tanto del software como personal. Como diría Tío Ben: "Un gran poder conlleva una gran responsabilidad."',
+    'about.quote': 'Me gusta tomar decisiones con calma y criterio. Y en momentos clave, recuerdo lo que dijo el Tío Ben: "Un gran poder conlleva una gran responsabilidad.”',
     'about.looking': 'Busco participar en proyectos desafiantes que me permitan aplicar y expandir mis conocimientos.',
 
     // Educación y experiencia consolidada
@@ -129,14 +129,14 @@ const translations = {
     'about.subtitle': 'Engineering, Technology, and the Structure Behind the Code',
     
     // Reorganized main paragraphs
-    'about.p1': 'I am Orlando AV, a backend developer in training from Cochabamba, Bolivia.',
+    'about.p1': 'I am Orlando AV, a backend developer, Full Stack in training from Cochabamba, Bolivia.',
     'about.p2': 'My main focus is Backend development, where I apply my passion for planning and designing system architectures. Although I don\'t have formal work experience yet, I have cultivated robust skills through academic and personal projects, as well as my role as a teaching assistant in my faculty\'s laboratories.',
     'about.p3': 'I work with backend frameworks like Django, FastAPI, Express (TypeScript/TypeORM), and NestJS, complementing my experience with frontend (React, Angular) and mobile development (Ionic, Flutter). Additionally, I have knowledge in UI/UX, automation, testing, containerization with Docker, and application deployment on platforms like PythonAnywhere, Railway, Vercel, and Render.',
     'about.p4': 'My methodology is based on thoroughly understanding each tool before implementing it, ensuring stable and maintainable technical solutions. I believe that good planning is the essential map for the success of any project: you cannot build without a clear structure. Although I use modern tools like AI to optimize development, I always seek to maintain a balance between efficiency and technical understanding.',
     'about.p5': 'I am constantly seeking to learn, exploring areas like Artificial Intelligence, Robotics, and Forensic Computing, driven by curiosity and continuous improvement.',
 
     // Personal quote
-    'about.quote': 'I firmly believe in constant development, both in software and personally. As Uncle Ben would say: \'With great power comes great responsibility.\'',
+    'about.quote': 'I like to make decisions calmly and thoughtfully. And in key moments, I remember what Uncle Ben said: \'With great power comes great responsibility.\'',
     'about.looking': 'I seek to participate in challenging projects that allow me to apply and expand my knowledge.',
 
     // Consolidated education and experience

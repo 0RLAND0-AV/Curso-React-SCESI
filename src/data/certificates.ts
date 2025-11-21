@@ -1,32 +1,35 @@
 // src\data\certificates.ts
 import type { Certificate } from '../types/index.types';
-import pythonCert from '../assets/images/certificates/python-data-science.jpg';
-import nodeCert from '../assets/images/certificates/nodejs-complete.jpg';
+import IntroduccionJS from '../assets/images/certificates/JS.jpeg';
+import IntroduccionSQL from '../assets/images/certificates/SQL2.webp';
+// import pythonCert from '../assets/images/certificates/python-data-science.jpg';
+// import nodeCert from '../assets/images/certificates/nodejs-complete.jpg';
 import dockerCert from '../assets/images/certificates/docker-kubernetes.jpg';
 import reactCert from '../assets/images/certificates/react-complete.jpg';
 import djangoCert from '../assets/images/certificates/django-web.jpg';
 import cyberCert from '../assets/images/certificates/cybersecurity-cisco.jpg';
 
+
 export const certificates: Certificate[] = [
   {
     id: 1,
-    title: 'Python para Data Science',
-    issuer: 'Coursera - IBM',
-    date: 'Marzo 2024',
-    credentialId: 'ABC123XYZ',
-    credentialUrl: 'https://coursera.org/verify/ABC123XYZ',
-    imageUrl: pythonCert,
-    skills: ['Python', 'Pandas', 'NumPy', 'Data Analysis']
+    title: 'Introduccion a JavaScript',
+    issuer: 'SoloLearn',
+    date: 'Agosto 2025',
+    credentialId: 'CC-ZM4KEVAQ',
+    credentialUrl: 'https://api2.sololearn.com/v2/certificates/CC-ZM4KEVAQ/image/png?t=638976377194930805',
+    imageUrl: IntroduccionJS,
+    skills: ['JavaScript', 'ES6 básico', 'DOM', 'Control de flujo', 'Funciones']
   },
   {
     id: 2,
-    title: 'Node.js - The Complete Guide',
-    issuer: 'Udemy',
-    date: 'Enero 2024',
-    credentialId: 'UC-NODE2024',
-    credentialUrl: 'https://udemy.com/certificate/UC-NODE2024',
-    imageUrl: nodeCert,
-    skills: ['Node.js', 'Express', 'REST API', 'MongoDB']
+    title: 'Introduccion SQL',
+    issuer: 'SoloLearn',
+    date: 'Febrero 2024',
+    credentialId: 'CC-EORYTF2R',
+    credentialUrl: 'https://api2.sololearn.com/v2/certificates/CC-EORYTF2R/image/png?t=638992792876366582',
+    imageUrl: IntroduccionSQL,
+    skills: ['SQL', 'Consultas', 'Filtros', 'Joins']
   },
   {
     id: 3,
