@@ -1,21 +1,19 @@
 import type { ContactFormData } from '../types/index.types';
 
-// URL de tu backend (cambiar cuando tengas tu API)
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000/api';
+const API_URL = import.meta.env.VITE_GSCRIPT_WEBAPP;
 
-/**
- * Envía un email usando backend
- * @param data - Datos del formulario de contacto
- * @returns Promise<void>
- */
 export const sendEmail = async (data: ContactFormData): Promise<void> => {
   try {
-    const response = await fetch(`${API_URL}/contact`, {
+    // Crear FormData en lugar de JSON
+    const formData = new FormData();
+    formData.append('name', data.name);
+    formData.append('email', data.email);
+    formData.append('subject', data.subject || '');
+    formData.append('message', data.message);
+
+    const response = await fetch(API_URL, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
+      body: formData, // Enviar como FormData, no JSON
     });
 
     if (!response.ok) {
@@ -23,24 +21,14 @@ export const sendEmail = async (data: ContactFormData): Promise<void> => {
     }
 
     const result = await response.json();
+    
+    if (result.result !== 'success') {
+      throw new Error(result.error || 'Error desconocido');
+    }
+
     return result;
   } catch (error) {
-    console.error('Error sending email:', error);
+    console.error('Error sending data to Google Sheets:', error);
     throw error;
   }
-};
-
-// Versión alternativa con simulación (para desarrollo)
-export const sendEmailMock = async (data: ContactFormData): Promise<void> => {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      console.log('Email mock sent:', data);
-      // Simula éxito 90% del tiempo
-      if (Math.random() > 0.1) {
-        resolve();
-      } else {
-        reject(new Error('Simulated error'));
-      }
-    }, 2000);
-  });
 };

@@ -42,26 +42,28 @@ export const ContactForm = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = async (e: FormEvent) => {
-    e.preventDefault();
+const handleSubmit = async (e: FormEvent) => {
+  e.preventDefault();
+  
+  if (!validateForm()) return;
+  
+  setStatus('loading');
+  
+  try {
+    console.log('Enviando datos:', formData); // ← Añade esto
     
-    if (!validateForm()) return;
+    await sendEmail(formData);
+    setStatus('success');
+    setFormData({ name: '', email: '', subject: '', message: '' });
     
-    setStatus('loading');
+    setTimeout(() => setStatus('idle'), 3000);
+  } catch (error) {
+    console.error('Error completo:', error); // ← Mira el error detallado
+    setStatus('error');
     
-    try {
-      await sendEmail(formData);
-      setStatus('success');
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      
-      setTimeout(() => setStatus('idle'), 3000);
-    } catch (error) {
-      console.error('Error sending email:', error);
-      setStatus('error');
-      
-      setTimeout(() => setStatus('idle'), 3000);
-    }
-  };
+    setTimeout(() => setStatus('idle'), 3000);
+  }
+};
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
